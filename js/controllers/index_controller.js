@@ -1,11 +1,8 @@
-/*global */
 module.exports = function (App) {
 	'use strict';
 
 	var API_URL = 'https://bower-component-list.herokuapp.com';
-
 	var LEFT_KEY = 37;
-
 	var RIGHT_KEY = 39;
 
 	App.controller('IndexController', [
@@ -13,36 +10,35 @@ module.exports = function (App) {
 		'$http',
 		'$location',
 		function ($scope, $http, $location) {
-
 			$scope.leftKey  = LEFT_KEY;
 			$scope.rightKey = RIGHT_KEY;
 
-			$scope.loading      = true;
+			$scope.loading = true;
 			$scope.loadingError = false;
-			$scope.hasResults   = false;
+			$scope.hasResults = false;
 
 			// data
-			var items          = [];
+			var items = [];
 			var matchedResults = [];
-			$scope.results     = [];
+			$scope.results = [];
 
 			// pagination
-			$scope.q       = '';
+			$scope.q = '';
 			$scope.qParams = {
 				keyword: '',
 				owner: null
 			};
 
-			$scope.sortField   = 'stars';
+			$scope.sortField = 'stars';
 			$scope.sortReverse = true;
-			$scope.limit       = 30;
-			$scope.page        = 1;
-			$scope.count       = 0;
-			$scope.pagesCount  = 1;
+			$scope.limit = 30;
+			$scope.page = 1;
+			$scope.count = 0;
+			$scope.pagesCount = 1;
 
 			// matchers
 			var matchesByName = function (item) {
-				if (item.name.indexOf($scope.qParams.keyword.toLowerCase()) > -1) {
+				if (item.name.indexOf($scope.qParams.keyword.toLowerCase()) !== -1) {
 					return true;
 				}
 
@@ -65,7 +61,7 @@ module.exports = function (App) {
 				}
 
 				if (item.owner && item.owner.length > 0) {
-					if (item.owner.toLowerCase().indexOf($scope.qParams.owner.toLowerCase()) > -1) {
+					if (item.owner.toLowerCase().indexOf($scope.qParams.owner.toLowerCase()) !== -1) {
 						return true;
 					}
 				}
@@ -75,7 +71,7 @@ module.exports = function (App) {
 
 			// queries
 			var find = function (items) {
-				return _.filter(items, function(item) {
+				return _.filter(items, function (item) {
 					if ($scope.q.length === 0) {
 						return true;
 					}
@@ -89,7 +85,7 @@ module.exports = function (App) {
 			};
 
 			var sort = function (matchedResults) {
-				var list = _.sortBy(matchedResults, function(item) {
+				var list = _.sortBy(matchedResults, function (item) {
 					return item[$scope.sortField];
 				});
 
@@ -116,7 +112,8 @@ module.exports = function (App) {
 				}
 
 				var keywords = [];
-				var owner    = null;
+				var owner = null;
+
 				$scope.q.split(' ').forEach(function (v) {
 					if (v.indexOf('owner:') === 0) {
 						owner = v.replace('owner:', '');
@@ -139,15 +136,15 @@ module.exports = function (App) {
 				matchedResults = sort(matchedResults);
 				$scope.results = limit(matchedResults);
 
-				$scope.count      = matchedResults.length;
+				$scope.count = matchedResults.length;
 				$scope.pagesCount = Math.ceil($scope.count / $scope.limit);
 			};
 
 			$scope.sortResults = function (field) {
-				$scope.sortReverse = ($scope.sortField === field) ? !$scope.sortReverse : false;
-				$scope.sortField   = field;
-				matchedResults     = sort(matchedResults);
-				$scope.results     = limit(matchedResults);
+				$scope.sortReverse = $scope.sortField === field ? !$scope.sortReverse : false;
+				$scope.sortField = field;
+				matchedResults = sort(matchedResults);
+				$scope.results = limit(matchedResults);
 			};
 
 			$scope.goToPrev = function () {
@@ -180,7 +177,7 @@ module.exports = function (App) {
 					return false;
 				}
 
-				items          = res.data;
+				items = res.data;
 				$scope.loading = false;
 
 				var urlParams = $location.search();
@@ -190,8 +187,6 @@ module.exports = function (App) {
 
 				$scope.search();
 			});
-
 		}
 	]);
-
 };

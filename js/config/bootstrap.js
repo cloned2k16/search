@@ -7,5 +7,4 @@
 	require('../directives/shortcut')(App);
 	require('../filters/format_date')(App);
 	require('../controllers/index_controller')(App);
-
 })();

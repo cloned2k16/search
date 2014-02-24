@@ -1,4 +1,3 @@
-/*global */
 module.exports = function (App) {
 	'use strict';
 
@@ -23,5 +22,4 @@ module.exports = function (App) {
 				dayDiff < 31 && Math.ceil( dayDiff / 7 ) + ' weeks ago';
 		};
 	});
-
 };

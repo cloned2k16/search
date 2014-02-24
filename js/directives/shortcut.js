@@ -1,4 +1,3 @@
-/*global */
 module.exports = function (App) {
 	'use strict';
 
@@ -7,7 +6,7 @@ module.exports = function (App) {
 		function ($document) {
 			return {
 				link: function (scope, element, attrs) {
-					attrs.$observe('shortcut', function(value) {
+					attrs.$observe('shortcut', function (value) {
 						var keycode = parseInt(value, 10);
 						var handler = function (e) {
 							if (e.keyCode !== keycode) {
@@ -16,6 +15,7 @@ module.exports = function (App) {
 
 							element.triggerHandler('click');
 						};
+
 						$document.on('keydown', handler);
 
 						scope.$on('$destroy', function () {
@@ -26,5 +26,4 @@ module.exports = function (App) {
 			}
 		}
 	]);
-
 };

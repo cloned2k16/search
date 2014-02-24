@@ -18,6 +18,7 @@ module.exports = function (App) {
 			$scope.hasResults = false;
 
 			// data
+			var ignore = require('../config/ignore');
 			var items = [];
 			var matchedResults = [];
 			$scope.results = [];
@@ -72,6 +73,10 @@ module.exports = function (App) {
 			// queries
 			var find = function (items) {
 				return _.filter(items, function (item) {
+					if (ignore.indexOf(item.name) !== -1) {
+						return false;
+					}
+
 					if ($scope.q.length === 0) {
 						return true;
 					}

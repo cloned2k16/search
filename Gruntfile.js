@@ -93,6 +93,6 @@ module.exports = function (grunt) {
 	]);
 	grunt.registerTask('serve', [
 		'default',
-		'connect:app',
+		'connect:app'
 	]);
 };

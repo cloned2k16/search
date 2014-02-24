@@ -18,9 +18,9 @@ It usually takes an hour for new components to show up on the site.
 
 Open http://localhost:9001 in your browser.
 
-# Blacklist packages
+### Blacklist packages
 
-There are cases when the same package is registered in multiple names. To hide them, add the duplicate names to `js/config/ignore.js`.
+To hide duplicate package names, add the names to `js/config/ignore.js` file.
 
 ## Credit
 

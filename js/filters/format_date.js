@@ -3,23 +3,34 @@ module.exports = function (App) {
 
 	App.filter('formatDate', function () {
 		return function (timestamp) {
-			var date = new Date((timestamp || '').replace(/-/g,'/').replace(/[TZ]/g,' '));
-			var diff = (((new Date()).getTime() - date.getTime()) / 1000);
-			var dayDiff = Math.floor(diff / 86400);
+			var date = new Date(timestamp);
+			var seconds = Math.floor((new Date() - date) / 1000);
 
-			if (isNaN(dayDiff) || dayDiff < 0 || dayDiff >= 31) {
-				return;
+			var interval = Math.floor(seconds / (60 * 60 * 24 * 365));
+			if (interval > 1) {
+				return interval + ' years';
 			}
 
-			return dayDiff === 0 && (
-					diff < 60 && 'just now' ||
-					diff < 120 && '1 minute ago' ||
-					diff < 3600 && Math.floor( diff / 60 ) + ' minutes ago' ||
-					diff < 7200 && '1 hour ago' ||
-					diff < 86400 && Math.floor( diff / 3600 ) + ' hours ago') ||
-				dayDiff === 1 && 'Yesterday' ||
-				dayDiff < 7 && dayDiff + ' days ago' ||
-				dayDiff < 31 && Math.ceil( dayDiff / 7 ) + ' weeks ago';
+			interval = Math.floor(seconds / (60 * 60 * 24 * 30));
+			if (interval > 1) {
+				return interval + ' months';
+			}
+
+			interval = Math.floor(seconds / (60 * 60 * 24));
+			if (interval > 1) {
+				return interval + ' days';
+			}
+
+			interval = Math.floor(seconds / (60 * 60));
+			if (interval > 1) {
+				return interval + ' hours';
+			}
+
+			interval = Math.floor(seconds / 60);
+			if (interval > 1) {
+				return interval + ' minutes';
+			}
+			return Math.floor(seconds) + ' seconds';
 		};
 	});
 };

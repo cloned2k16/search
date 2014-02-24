@@ -8,29 +8,34 @@ module.exports = function (App) {
 
 			var interval = Math.floor(seconds / (60 * 60 * 24 * 365));
 			if (interval > 1) {
-				return interval + ' years';
+				return interval + ' years ago';
 			}
 
 			interval = Math.floor(seconds / (60 * 60 * 24 * 30));
 			if (interval > 1) {
-				return interval + ' months';
+				return interval + ' months ago';
+			}
+
+			interval = Math.floor(seconds / (60 * 60 * 24 * 7));
+			if (interval > 1) {
+				return interval + ' weeks ago';
 			}
 
 			interval = Math.floor(seconds / (60 * 60 * 24));
 			if (interval > 1) {
-				return interval + ' days';
+				return interval + ' days ago';
 			}
 
 			interval = Math.floor(seconds / (60 * 60));
 			if (interval > 1) {
-				return interval + ' hours';
+				return interval + ' hours ago';
 			}
 
 			interval = Math.floor(seconds / 60);
 			if (interval > 1) {
-				return interval + ' minutes';
+				return interval + ' minutes ago';
 			}
-			return Math.floor(seconds) + ' seconds';
+			return Math.floor(seconds) + ' seconds ago';
 		};
 	});
 };

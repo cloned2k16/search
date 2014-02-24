@@ -51,10 +51,8 @@ module.exports = function (App) {
 
 			var matchesByKeyword = function (item) {
 				if (_.isArray(item.keywords) && item.keywords.length > 0) {
-					item.keywords.forEach(function (keyword) {
-						if (keyword.toLowerCase().indexOf($scope.qParams.keyword.toLowerCase()) > -1) {
-							return true;
-						}
+					return item.keywords.some(function (keyword) {
+						return keyword.toLowerCase().indexOf($scope.qParams.keyword.toLowerCase()) !== -1;
 					});
 				}
 

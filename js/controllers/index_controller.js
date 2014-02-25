@@ -133,9 +133,7 @@ module.exports = function (App) {
 				};
 
 				$scope.page = 1;
-				$location.search({
-					q: $scope.q
-				});
+				$scope.q.length ? $location.search({q: $scope.q}) : $location.search({});
 
 				matchedResults = find(items);
 				matchedResults = sort(matchedResults);

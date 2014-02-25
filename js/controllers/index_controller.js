@@ -110,6 +110,22 @@ module.exports = function (App) {
 				return list;
 			};
 
+			var prioritize = function (matchedResults) {
+				if (!$scope.qParams.keyword) {
+					return matchedResults;
+				}
+
+				var match = _.findIndex(matchedResults, function (item) {
+					return $scope.qParams.keyword.toLowerCase() === item.name.toLowerCase();
+				});
+
+				if (match !== -1) {
+					matchedResults.splice(0, 0, matchedResults.splice(match, 1)[0]);
+				}
+
+				return matchedResults;
+			};
+
 			// search
 			$scope.search = function () {
 				if ($scope.loading) {
@@ -137,6 +153,7 @@ module.exports = function (App) {
 
 				matchedResults = find(items);
 				matchedResults = sort(matchedResults);
+				matchedResults = prioritize(matchedResults);
 				$scope.results = limit(matchedResults);
 
 				$scope.count = matchedResults.length;

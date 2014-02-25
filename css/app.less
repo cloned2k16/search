@@ -28,6 +28,8 @@
 @scheme: #34495e;
 @schemeLightened: lighten(@scheme, 5%);
 @schemeDarkened: darken(@scheme, 5%);
+@table-bg-hover: transparent;
+@container-large-desktop: 900px;
 
 body {
 	font-family: @family;
@@ -45,8 +47,20 @@ h6 {
 	font-weight: 400;
 }
 
+h4 {
+	font-size: 24px;
+}
+
 a {
 	color: #2980b9;
+}
+
+.table > thead > tr > th {
+	border-bottom: 1px solid #ddd;
+}
+
+.table > tbody > tr > td {
+	border-top: 1px solid #f2f2f2;
 }
 
 header {
@@ -95,7 +109,7 @@ header {
 			box-shadow: none;
 			border: 3px solid @schemeDarkened;
 			font-size: 18px;
-			padding: 8px 20px 8px 10px;
+			padding: 12px 20px 12px 10px;
 			font-weight: 400;
 		}
 	}
@@ -104,9 +118,10 @@ header {
 section {
 	.container {
 		background: #fff;
-		border-radius: 4px;
-		box-shadow: 0 8px 20px 6px #ccc;
+		border-radius: 2px;
+		box-shadow: 0 2px 2px #ccc;
 		margin-bottom: 50px;
+		padding-top: 10px;
 
 		.alert {
 			margin-top: 20px;
@@ -138,17 +153,17 @@ section {
 				vertical-align: middle;
 			}
 
-			.name {
-				width: 65%;
-			}
-
 			.owners,
 			.updated {
-				width: 15%;
+				width: 13%;
+			}
+
+			.updated {
+				white-space: nowrap;
 			}
 
 			.stars {
-				width: 5%;
+				width: 8%;
 			}
 		}
 

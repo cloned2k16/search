@@ -1,6 +1,7 @@
-/*global module */
+'use strict';
+
 module.exports = function (grunt) {
-	'use strict';
+	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
 		less: {
@@ -58,8 +59,7 @@ module.exports = function (grunt) {
 			app: {
 				options: {
 					port: 9001,
-					base: '.',
-					keepalive: true
+					base: '.'
 				}
 			}
 		},
@@ -74,15 +74,6 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-browserify');
-
 	grunt.registerTask('default', [
 		'jshint:app',
 		'browserify:app',
@@ -91,8 +82,10 @@ module.exports = function (grunt) {
 		'cssmin:app',
 		'uglify:app'
 	]);
+
 	grunt.registerTask('serve', [
 		'default',
-		'connect:app'
+		'connect:app',
+		'watch:app'
 	]);
 };

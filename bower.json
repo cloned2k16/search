@@ -1,6 +1,5 @@
 {
-  "name": "bower-components",
-  "version": "0.0.0",
+  "name": "bower-search",
   "dependencies": {
     "bootstrap": "~3.1.0",
     "angular": "~1.2.12",

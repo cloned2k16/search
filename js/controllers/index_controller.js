@@ -191,6 +191,11 @@ module.exports = function (App) {
 			};
 
 			// init
+			var urlParams = $location.search();
+			if (_.isObject(urlParams) && typeof urlParams.q !== 'undefined') {
+				$scope.q = urlParams.q;
+			}
+
 			if ($scope.q.length === 0) {
 				// get first page from cache if available
 				var firstPage = localStorageService.get('firstPage');
@@ -200,6 +205,7 @@ module.exports = function (App) {
 					$scope.search();
 				}
 			}
+
 			$http.get(API_URL).then(function (res) {
 				if (res.status !== 200) {
 					$scope.loadingError = true;
@@ -209,16 +215,11 @@ module.exports = function (App) {
 				items = res.data;
 				$scope.loading = false;
 
-				// cache results of first page on first visit
 				if ($scope.q.length === 0) {
+					// cache results of first page on first visit
 					var sorted = sort(items);
 					var firstPage = limit(sorted);
 					localStorageService.add('firstPage', firstPage);
-				}
-
-				var urlParams = $location.search();
-				if (_.isObject(urlParams) && typeof urlParams.q !== 'undefined') {
-					$scope.q = urlParams.q;
 				}
 				$scope.search();
 

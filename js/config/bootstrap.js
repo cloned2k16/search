@@ -12,6 +12,8 @@
 	]);
 
 	require('../directives/shortcut')(App);
+	require('../directives/bind_once')(App);
+	require('../directives/bind_attr_once')(App);
 	require('../filters/format_date')(App);
 	require('../controllers/index_controller')(App);
 })();

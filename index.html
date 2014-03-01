@@ -49,22 +49,18 @@
 								<tr ng-repeat="result in results">
 									<td class="name">
 										<h4>
-											<a href="{{result.website}}">
-												{{result.name}}
-											</a>
+											<a bind-attr-once="{href: result.website}" bind-once="result.name"></a>
 										</h4>
-										<p class="description" title="{{result.description}}">
-											{{result.description}}
-										</p>
+										<p class="description" bind-attr-once="{title: result.description}" bind-once="result.description"></p>
 										<p class="visible-xs">
-											<span class="label">Owner: {{result.owner}}</span>
-											<span class="label">Stars: {{result.stars}}</span>
-											<span class="label">Updated: {{result.updated | formatDate}}</span>
+											<span class="label" bind-once="'Owner: ' + result.owner"></span>
+											<span class="label" bind-once="'Stars: ' + result.stars"></span>
+											<span class="label" bind-once="'Updated: ' + (result.updated | formatDate)"></span>
 										</p>
 									</td>
-									<td class="hidden-xs owner">{{result.owner}}</td>
-									<td class="hidden-xs stars">{{result.stars}}</td>
-									<td class="hidden-xs updated">{{result.updated | formatDate}}</td>
+									<td class="hidden-xs owner" bind-once="result.owner"></td>
+									<td class="hidden-xs stars" bind-once="result.stars"></td>
+									<td class="hidden-xs updated" bind-once="result.updated | formatDate"></td>
 								</tr>
 							</tbody>
 						</table>

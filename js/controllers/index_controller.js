@@ -127,12 +127,6 @@ module.exports = function (App) {
 				return matchedResults;
 			};
 
-			$scope.$watch('q', _.debounce(function (q) {
-				$scope.$apply(function () {
-					q.length ? $location.search({q: q}) : $location.search({});
-				});
-			}, 300));
-
 			// search
 			$scope.search = function () {
 				if ($scope.loading) {
@@ -226,8 +220,13 @@ module.exports = function (App) {
 				if (_.isObject(urlParams) && typeof urlParams.q !== 'undefined') {
 					$scope.q = urlParams.q;
 				}
-
 				$scope.search();
+
+				$scope.$watch('q', _.debounce(function (q) {
+					$scope.$apply(function () {
+						q.length ? $location.search({q: q}) : $location.search({});
+					});
+				}, 300));
 			});
 		}
 	]);

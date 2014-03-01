@@ -9,7 +9,8 @@ module.exports = function (App) {
 		'$scope',
 		'$http',
 		'$location',
-		function ($scope, $http, $location) {
+		'localStorageService',
+		function ($scope, $http, $location, localStorageService) {
 			$scope.leftKey  = LEFT_KEY;
 			$scope.rightKey = RIGHT_KEY;
 
@@ -130,7 +131,7 @@ module.exports = function (App) {
 				$scope.$apply(function () {
 					q.length ? $location.search({q: q}) : $location.search({});
 				});
-			}, 250));
+			}, 300));
 
 			// search
 			$scope.search = function () {
@@ -196,6 +197,15 @@ module.exports = function (App) {
 			};
 
 			// init
+			if ($scope.q.length === 0) {
+				// get first page from cache if available
+				var firstPage = localStorageService.get('firstPage');
+				if (_.isArray(firstPage)) {
+					items = firstPage;
+					$scope.loading = false;
+					$scope.search();
+				}
+			}
 			$http.get(API_URL).then(function (res) {
 				if (res.status !== 200) {
 					$scope.loadingError = true;
@@ -204,6 +214,13 @@ module.exports = function (App) {
 
 				items = res.data;
 				$scope.loading = false;
+
+				// cache results of first page on first visit
+				if ($scope.q.length === 0) {
+					var sorted = sort(items);
+					var firstPage = limit(sorted);
+					localStorageService.add('firstPage', firstPage);
+				}
 
 				var urlParams = $location.search();
 				if (_.isObject(urlParams) && typeof urlParams.q !== 'undefined') {

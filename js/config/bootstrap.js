@@ -2,7 +2,7 @@
 (function () {
 	'use strict';
 
-	var App = angular.module('BowerComponents', []);
+	var App = angular.module('BowerSearch', ['LocalStorageModule']);
 
 	App.config([
 		'$locationProvider',

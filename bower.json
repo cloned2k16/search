@@ -3,6 +3,7 @@
   "dependencies": {
     "bootstrap": "~3.1.0",
     "angular": "~1.2.12",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "angular-local-storage": "~0.0.1"
   }
 }

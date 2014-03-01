@@ -9,8 +9,7 @@ module.exports = function (App) {
 		'$scope',
 		'$http',
 		'$location',
-		'$timeout',
-		function ($scope, $http, $location, $timeout) {
+		function ($scope, $http, $location) {
 			$scope.leftKey  = LEFT_KEY;
 			$scope.rightKey = RIGHT_KEY;
 
@@ -127,16 +126,11 @@ module.exports = function (App) {
 				return matchedResults;
 			};
 
-			// update location
-			var updateLocationTimeout = null;
-			var updateLocation = function () {
-				if (updateLocationTimeout) {
-					$timeout.cancel(updateLocationTimeout);
-				}
-				updateLocationTimeout = $timeout(function () {
-					$scope.q.length ? $location.search({q: $scope.q}) : $location.search({});
-				}, 300);
-			};
+			$scope.$watch('q', _.debounce(function (q) {
+				$scope.$apply(function () {
+					q.length ? $location.search({q: q}) : $location.search({});
+				});
+			}, 250));
 
 			// search
 			$scope.search = function () {
@@ -161,7 +155,6 @@ module.exports = function (App) {
 				};
 
 				$scope.page = 1;
-				updateLocation();
 
 				matchedResults = find(items);
 				matchedResults = sort(matchedResults);

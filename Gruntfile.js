@@ -74,6 +74,50 @@ module.exports = function (grunt) {
 		}
 	});
 
+	grunt.registerTask('duplicates', 'Generate duplicates.json file.', function() {
+		var http = require('http');
+		var done = this.async();
+		var packagesUrl = 'http://bower-component-list.herokuapp.com';
+
+		var processList = function (items) {
+			var ignored = require('./js/config/ignore');
+			var namesByUrl = {};
+			items.forEach(function (item) {
+				var name = item.name;
+				if (ignored.indexOf(name) !== -1) {
+					return;
+				}
+
+				var url = item.website;
+				if (typeof namesByUrl[url] === 'undefined') {
+					namesByUrl[url] = [];
+				}
+				namesByUrl[url].push(name);
+			});
+
+			var duplicates = {};
+			for (var url in namesByUrl) {
+				var names = namesByUrl[url];
+				if (names.length > 1) {
+					duplicates[url] = names;
+				}
+			}
+			grunt.file.write('duplicates.json', JSON.stringify(duplicates, null, '\t'));
+		};
+
+		http.get(packagesUrl, function (res) {
+			var data = '';
+			res.on('data', function (chunk) {
+				data += chunk;
+			});
+			res.on('end', function () {
+				var items = JSON.parse(data);
+				processList(items);
+				done();
+			});
+		});
+	});
+
 	grunt.registerTask('default', [
 		'jshint:app',
 		'browserify:app',

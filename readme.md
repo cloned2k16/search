@@ -22,6 +22,14 @@ Open http://localhost:9001 in your browser.
 
 To hide duplicate package names, add the names to `js/config/ignore.js` file.
 
+You can easily generate a file containing packages that need to be taken care of for duplicates by running:
+
+    $ grunt duplicates
+
+This will then create a `duplicate.json` file. Each item is keyed by its URL, containing its names.
+
+For example, if a specific URL has 3 names, 2 of them should be treated as duplicates, and they should end up in `ignore.js` file.
+
 ## Credit
 
 [![Fahad Ibnay Heylaal](http://gravatar.com/avatar/19a3655e6ba9e5a496ee690ba03f2180?s=144)](http://fahad19.com) | [![Sindre Sorhus](http://gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9?s=144)](http://sindresorhus.com)

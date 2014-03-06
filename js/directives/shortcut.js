@@ -8,8 +8,9 @@ module.exports = function (App) {
 				link: function (scope, element, attrs) {
 					attrs.$observe('shortcut', function (value) {
 						var keycode = parseInt(value, 10);
+						var searchField = document.getElementById('q');
 						var handler = function (e) {
-							if (e.keyCode !== keycode) {
+							if (e.keyCode !== keycode || document.activeElement === searchField) {
 								return;
 							}
 

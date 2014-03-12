@@ -25,7 +25,11 @@ module.exports = function (App) {
 			$scope.results = [];
 
 			// pagination
-			$scope.q = '';
+			var extractQuery = function () {
+				var urlParams = $location.search();
+				return (_.isObject(urlParams) && typeof urlParams.q !== 'undefined') ? urlParams.q : '';
+			}
+			$scope.q = extractQuery();
 			$scope.qParams = {
 				keyword: '',
 				owner: null
@@ -191,11 +195,6 @@ module.exports = function (App) {
 			};
 
 			// init
-			var urlParams = $location.search();
-			if (_.isObject(urlParams) && typeof urlParams.q !== 'undefined') {
-				$scope.q = urlParams.q;
-			}
-
 			if ($scope.q.length === 0) {
 				// get first page from cache if available
 				var firstPage = localStorageService.get('firstPage');
@@ -223,11 +222,28 @@ module.exports = function (App) {
 				}
 				$scope.search();
 
+				var searchOnLocationChange = true;
+				var updateLocationOnQueryChange = true;
 				$scope.$watch('q', _.debounce(function (q) {
 					$scope.$apply(function () {
-						q.length ? $location.search({q: q}) : $location.search({});
+						if (updateLocationOnQueryChange) {
+							searchOnLocationChange = false;
+							q.length ? $location.search({q: q}) : $location.search({});
+						}
+
+						updateLocationOnQueryChange = true;
 					});
 				}, 300));
+
+				$scope.$on('$locationChangeSuccess', function (next, current) {
+					if (searchOnLocationChange) {
+						updateLocationOnQueryChange = false;
+						$scope.q = extractQuery();
+						$scope.search();
+					}
+
+					searchOnLocationChange = true;
+				});
 			});
 		}
 	]);

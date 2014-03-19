@@ -44,7 +44,7 @@ module.exports = function (App) {
 
 			// matchers
 			var matchesByName = function (item) {
-				if (item.name.indexOf($scope.qParams.keyword.toLowerCase()) !== -1) {
+				if (item.name.toLowerCase().indexOf($scope.qParams.keyword.toLowerCase()) !== -1) {
 					return true;
 				}
 

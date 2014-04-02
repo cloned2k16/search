@@ -20,6 +20,7 @@ module.exports = function (App) {
 
 			// data
 			var ignore = require('../config/ignore');
+			var whitelist = require('../config/whitelist');
 			var items = [];
 			var matchedResults = [];
 			$scope.results = [];
@@ -80,6 +81,13 @@ module.exports = function (App) {
 				return _.filter(items, function (item) {
 					if (ignore.indexOf(item.name) !== -1) {
 						return false;
+					}
+
+					if (_.isString(item.website) && typeof whitelist[item.website] !== 'undefined') {
+						var whitelistedName = whitelist[item.website];
+						if (item.name !== whitelistedName) {
+							return false;
+						}
 					}
 
 					if ($scope.q.length === 0) {

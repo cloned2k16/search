@@ -1,3 +1,6 @@
+/**
+ * Ignore these package names
+ */
 module.exports = [
 	'Chart.js',
 	'EaselJS',

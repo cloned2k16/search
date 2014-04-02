@@ -18,17 +18,11 @@ It usually takes an hour for new components to show up on the site.
 
 Open http://localhost:9001 in your browser.
 
-### Blacklist packages
+### Handling duplicates
 
-To hide duplicate package names, add the names to `js/config/ignore.js` file.
+Quickest way to hide any unwanted package name from appearing in search results, is to add the name to `js/config/ignore.js` file.
 
-You can easily generate a file containing packages that need to be taken care of for duplicates by running:
-
-    $ grunt duplicates
-
-This will then create a `duplicate.json` file. Each item is keyed by its URL, containing its names.
-
-For example, if a specific URL has 3 names, 2 of them should be treated as duplicates, and they should end up in `ignore.js` file.
+There are also cases when one popular package URL can end up being registered multiple times with various names. In that case, you can whitelist that package's URL by specifying a preferred name in `js/config/whitelist.js` file.
 
 ## Credit
 

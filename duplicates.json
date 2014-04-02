@@ -7,6 +7,18 @@
 		"addeventcapabilities",
 		"eventcapabilities"
 	],
+	"https://github.com/forbesmyester/addEvents": [
+		"add-events",
+		"addEvents"
+	],
+	"https://github.com/nowboy/aijs": [
+		"aijs",
+		"AiJS"
+	],
+	"https://github.com/liferay/alloy-ui": [
+		"alloyui",
+		"alloy-ui"
+	],
 	"https://github.com/davidhemphill/amaretto": [
 		"amaretto",
 		"Amaretto"
@@ -14,10 +26,6 @@
 	"https://github.com/lukasmartinelli/android-actionbar-icons": [
 		"android-actionbar-icons",
 		"bootstrap-android-icons"
-	],
-	"https://github.com/angular/bower-angular": [
-		"angular",
-		"angular2"
 	],
 	"https://github.com/PatternConsulting/bower-angular": [
 		"angular-1.1.x",
@@ -34,6 +42,14 @@
 	"https://github.com/angular-ui/bootstrap-bower": [
 		"angular-bootstrap",
 		"angular-ui-bootstrap-bower"
+	],
+	"https://github.com/dalelotts/angular-bootstrap-datetimepicker": [
+		"angular-bootstrap-datetimepicker",
+		"angular-bootstrap-datetimepicker-github"
+	],
+	"https://github.com/nickperkinslondon/angular-bootstrap-nav-tree": [
+		"angular-bootstrap-nav-tree",
+		"angular-bootstrap-nav-tree-nif"
 	],
 	"https://github.com/revolunet/angular-carousel": [
 		"angular-carousel",
@@ -63,6 +79,10 @@
 	"https://github.com/jtrussell/angular-fixed-head-table": [
 		"angular-fixed-header-table",
 		"angular-fixed-head-table"
+	],
+	"https://github.com/madmimi/angular-foundation-bower": [
+		"angular-foundation",
+		"angular-foundation-bower"
 	],
 	"https://github.com/angular-ui/ng-grid": [
 		"angular-grid",
@@ -116,6 +136,14 @@
 		"angular-mvd-tunnels",
 		"angular-tunnels"
 	],
+	"https://github.com/airtonix/angular-named-routes": [
+		"angular-named-routes",
+		"angular.named-routes"
+	],
+	"https://github.com/JeremyPinhel/ng-pageslide": [
+		"angular-ng-pageslide",
+		"ng-pageslide-directive"
+	],
 	"https://github.com/DerekRies/angular-notifications": [
 		"angular-notifications",
 		"test-angular-notifications"
@@ -148,6 +176,10 @@
 		"angular-ui-gaodemap",
 		"angular-ui-map-gaode"
 	],
+	"https://github.com/angular-ui/ui-utils": [
+		"angular-ui-utils",
+		"ui-utils"
+	],
 	"https://github.com/johannestroeger/bower-angular-unstable": [
 		"angular-unstable",
 		"iscs"
@@ -155,6 +187,10 @@
 	"https://github.com/fredricrylander/angular-webstorage": [
 		"angular-webstorage",
 		"webStorageModule"
+	],
+	"https://github.com/mgonto/angular-wizard": [
+		"angular-wizard",
+		"benl-angular-wizard"
 	],
 	"https://github.com/danmillar/jquery-anystretch": [
 		"anystretch",
@@ -183,6 +219,14 @@
 	"https://github.com/cherrylabs/arx-ui": [
 		"arx",
 		"arx-ui"
+	],
+	"https://github.com/aws/aws-sdk-js": [
+		"aws-sdk",
+		"aws-sdk-js"
+	],
+	"https://github.com/basisjs/backbone-basis-templates": [
+		"backbone-basis-templates",
+		"bbt"
 	],
 	"https://github.com/ggozad/Backbone.cachingSync": [
 		"backbone.cachingSync",
@@ -220,6 +264,10 @@
 	"https://github.com/lukasolson/backbone-super": [
 		"backbone-super",
 		"backbone.super"
+	],
+	"https://github.com/simonfan/backbone-ui-resizable": [
+		"backbone-ui-resizable",
+		"backbon-ui-resizable"
 	],
 	"https://github.com/rsskga/backbone.validation": [
 		"backbone.validation",
@@ -262,6 +310,10 @@
 		"JavaScript-MD5",
 		"js-md5"
 	],
+	"https://github.com/grevory/bootstrap-file-input": [
+		"boostrapfile",
+		"bootstrap-file-input"
+	],
 	"https://github.com/abnovak/bootstrap-sass-datepicker": [
 		"boostrap-sass-datepicker",
 		"bootstrap-sass-datepicker"
@@ -292,7 +344,8 @@
 	],
 	"https://github.com/ded/bowser": [
 		"bowser",
-		"Bowser"
+		"Bowser",
+		"browser"
 	],
 	"https://github.com/Team-Sass/breakpoint": [
 		"breakpoint-sass",
@@ -314,6 +367,10 @@
 		"cleanereditable",
 		"cleanerEditable"
 	],
+	"https://github.com/clearleft/clearless": [
+		"clearless",
+		"clear-less"
+	],
 	"https://github.com/mizchi/coffeecup": [
 		"coffeecup",
 		"coffeekup"
@@ -334,6 +391,14 @@
 		"components/ember",
 		"ember"
 	],
+	"https://github.com/conducto/conducto-client": [
+		"conducto",
+		"conducto-client"
+	],
+	"https://github.com/jcbrand/converse.js": [
+		"converse",
+		"converse.js"
+	],
 	"https://github.com/cryptocoinjs/convert-hex": [
 		"convert-hex",
 		"cryptocoin-convert-hex"
@@ -345,6 +410,10 @@
 	"https://github.com/ScottHamper/Cookies": [
 		"Cookies",
 		"cookies-js"
+	],
+	"https://github.com/KamilLelonek/CookiesOrStorage": [
+		"cookies-or-storage",
+		"CookiesOrStorage"
 	],
 	"https://github.com/CreateJS/PreloadJS": [
 		"createjs-preloadjs",
@@ -429,6 +498,10 @@
 		"Moye",
 		"zxui"
 	],
+	"https://github.com/johansatge/elastic-columns": [
+		"elastic-columns",
+		"ElasticColumns"
+	],
 	"https://github.com/elementaljs/elementaljs": [
 		"elemantaljs",
 		"elementaljs"
@@ -445,9 +518,18 @@
 		"ember-states",
 		"ember-states-shim"
 	],
+	"https://github.com/differui/Emma.js": [
+		"Emma",
+		"Emma.js"
+	],
 	"https://github.com/hassankhan/emojify.js": [
 		"emojify",
 		"emojify.js"
+	],
+	"https://github.com/epiphanysearch/d3graphlib": [
+		"epiphany/d3graphlib",
+		"epiphanysearch-d3graphlib",
+		"epiphanysearch/d3graphlib"
 	],
 	"https://github.com/soenkekluth/EventDispatcher": [
 		"eventdispatcher",
@@ -461,6 +543,10 @@
 		"express",
 		"poet"
 	],
+	"https://github.com/hzlzh/f2e-workflow": [
+		"f2e",
+		"f2e-workflow"
+	],
 	"https://github.com/lookout/factoryjs": [
 		"factoryjs",
 		"FactoryJS"
@@ -473,21 +559,34 @@
 		"file-saver",
 		"FileSaver"
 	],
+	"https://github.com/DavidDurman/FlexiJsonEditor": [
+		"flexijsoneditor",
+		"jsonmate"
+	],
 	"https://github.com/woothemes/FlexSlider": [
 		"flexlider",
-		"flexslider"
+		"flexslider",
+		"FlexSlider"
 	],
 	"https://github.com/mkoryak/floatThead": [
 		"floatThead",
 		"jquery.floatThead"
 	],
-	"https://github.com/FortAwesome/Font-Awesome": [
-		"fontawesome",
-		"font-awesome"
+	"https://github.com/raulghm/Font-Awesome-Stylus": [
+		"font-awesome-stylus",
+		"Font-Awesome-Stylus"
 	],
 	"https://github.com/components/handlebars.js": [
 		"foo-handlebars",
 		"handlebars"
+	],
+	"https://github.com/fortitude/settings.defaults": [
+		"fortitude.settings.defaults",
+		"settings.defaults"
+	],
+	"https://github.com/davejlong/foundation-daterangepicker": [
+		"foundation-dateragepicker",
+		"foundation-daterangepicker"
 	],
 	"https://github.com/DanielRapp/fragment.js": [
 		"fragment",
@@ -504,6 +603,10 @@
 	"https://github.com/totty90/futures-requirejs": [
 		"futures-requirejs",
 		"futures-requirejs@v2.1.2"
+	],
+	"https://github.com/Puppets/future-vars.js": [
+		"future-vars",
+		"future-vars.js"
 	],
 	"https://github.com/aino/galleria": [
 		"galleria",
@@ -529,10 +632,6 @@
 		"greensock",
 		"gsap"
 	],
-	"https://github.com/hzlzh/Grunt-Workflow": [
-		"grunt-workflow",
-		"Grunt-Workflow"
-	],
 	"https://github.com/ryanseddon/H5F": [
 		"h5f",
 		"H5F"
@@ -553,6 +652,10 @@
 		"hbs",
 		"require-handlebars-plugin"
 	],
+	"https://github.com/pablojim/highcharts-ng": [
+		"highchart-ng",
+		"highcharts-ng"
+	],
 	"https://github.com/horsebean/php-sensor": [
 		"horsebean-php-sensor",
 		"php-sensor"
@@ -568,6 +671,10 @@
 	"https://github.com/codeinchaos/httparchive.js": [
 		"httparchive.js",
 		"HTTPArchive.js"
+	],
+	"https://github.com/wavded/humane-js": [
+		"humane",
+		"humane-js"
 	],
 	"https://github.com/HenrikJoreteg/ICanHaz.js": [
 		"icanhaz",
@@ -602,6 +709,10 @@
 	"https://github.com/webcreate/infinite-ajax-scroll": [
 		"infinite-ajax-scroll",
 		"jquery-ias"
+	],
+	"https://github.com/infomaniac-amf/js": [
+		"infomaniac-amf/js",
+		"infomaniac-amf.js"
 	],
 	"https://github.com/sapo/Ink": [
 		"Ink",
@@ -683,6 +794,10 @@
 		"jquery-insertinorder",
 		"jquery-insertorder"
 	],
+	"https://github.com/esteinborn/jquery-listnav": [
+		"jquery-listnav",
+		"listnav"
+	],
 	"https://github.com/digitalBush/jquery.maskedinput": [
 		"jquery-maskedinput",
 		"jquery-maskedinputs"
@@ -714,6 +829,10 @@
 	"https://github.com/Arwid/jQuery.scrollIntoView": [
 		"jquery-scroll-into-view",
 		"jquery.scrollIntoView"
+	],
+	"https://github.com/madapaja/jquery.selection": [
+		"jquery-selection",
+		"jquery.selection"
 	],
 	"https://github.com/monkeecreate/jquery.simpleWeather": [
 		"jquery-simpleweather",
@@ -747,6 +866,10 @@
 		"jquery.superscrollorama",
 		"superscrollorama",
 		"SuperScrollorama"
+	],
+	"https://github.com/kdocki/jquery.switcheroo": [
+		"jquery.switcheroo",
+		"switcheroo"
 	],
 	"https://github.com/xoxco/jQuery-Tags-Input": [
 		"jquery-tags-input",
@@ -820,6 +943,10 @@
 		"klon",
 		"Klon"
 	],
+	"https://github.com/Knockout-Contrib/Knockout-Validation": [
+		"knockout-validation",
+		"ko-validation"
+	],
 	"https://github.com/ericmbarnard/Knockout-Validation": [
 		"knockout.validation",
 		"Knockout-Validation"
@@ -845,6 +972,10 @@
 		"lemonade",
 		"Lemonade"
 	],
+	"https://github.com/lokesh/lightbox2": [
+		"lightbox",
+		"lightbox2"
+	],
 	"https://github.com/mihaifm/linq": [
 		"linq",
 		"linqjs"
@@ -869,6 +1000,10 @@
 		"minTimer",
 		"minTimer@0.1.2"
 	],
+	"https://github.com/plone/mockup": [
+		"mockup",
+		"plone-mockup"
+	],
 	"https://github.com/sktoiva/moment-holiday-fi": [
 		"moment-holiday-fi",
 		"moment-holiday-js"
@@ -889,9 +1024,21 @@
 		"murmurhash3js",
 		"murmurHash3js"
 	],
+	"https://github.com/janl/mustache.js": [
+		"mustache",
+		"mustache.js"
+	],
+	"https://github.com/my-way/angular-header-bar": [
+		"mw-angular-header-bar",
+		"my-way.angular-header-bar"
+	],
 	"https://github.com/jamesflorentino/nanoScrollerJS": [
 		"nanoscroller",
 		"ninstall"
+	],
+	"https://github.com/chmanie/ng-calendar": [
+		"ng-calendar",
+		"ng-calender"
 	],
 	"https://github.com/ibspoof/ng-iScroll": [
 		"ng-iscroll",
@@ -911,6 +1058,10 @@
 		"node-haha",
 		"node-yy"
 	],
+	"https://github.com/NUKnightLab/TimelineJS": [
+		"NUKnightLab-TimelineJS",
+		"timeline.js"
+	],
 	"https://github.com/oauth-io/oauth-js": [
 		"oauth.io",
 		"oauth-js"
@@ -918,6 +1069,10 @@
 	"https://github.com/lagerone/oink": [
 		"oink",
 		"Oink"
+	],
+	"https://github.com/somecallmechief/oj": [
+		"OJ",
+		"ojs"
 	],
 	"https://github.com/guardian/scribe": [
 		"oliverjash-test",
@@ -930,6 +1085,10 @@
 	"https://github.com/visionmedia/page.js": [
 		"page",
 		"page.js"
+	],
+	"https://github.com/optimizme/pajinate": [
+		"pajinate",
+		"Pajinate"
 	],
 	"https://github.com/bemson/panzer": [
 		"panzer",
@@ -955,6 +1114,14 @@
 		"popcornjs",
 		"popcorn-js"
 	],
+	"https://github.com/Wildhoney/Posty": [
+		"posty",
+		"Posty"
+	],
+	"https://github.com/padolsey/prettyprint.js": [
+		"prettyprint",
+		"prettyPrint"
+	],
 	"https://github.com/jeresig/processing-js": [
 		"processing",
 		"processingjs"
@@ -963,7 +1130,11 @@
 		"progress-bars",
 		"progress-full-width"
 	],
-	"https://github.com/RactiveJS/Ractive-events-tap": [
+	"https://github.com/kevincennis/promise": [
+		"promisejs",
+		"promise-js"
+	],
+	"https://github.com/ractivejs/ractive-events-tap": [
 		"ractive-events-tap",
 		"Ractive-events-tap"
 	],
@@ -991,6 +1162,10 @@
 		"respond",
 		"respond-minmax"
 	],
+	"https://github.com/micc83/ReStable": [
+		"restable",
+		"ReStable"
+	],
 	"https://github.com/23/resumable.js": [
 		"resumablejs",
 		"Resumable.js"
@@ -999,9 +1174,17 @@
 		"rjs",
 		"r.js"
 	],
+	"https://github.com/rollbar/rollbar.js": [
+		"rollbar",
+		"rollbar.js"
+	],
 	"https://github.com/xna2/romaji.js": [
 		"romaji",
 		"romaji.js"
+	],
+	"https://github.com/ramiel/router.js": [
+		"router.js",
+		"Router.js"
 	],
 	"https://github.com/wishbear/rtc-multi-connection": [
 		"rtc-multi-connection",
@@ -1027,13 +1210,18 @@
 		"Seed",
 		"SeedHq"
 	],
+	"https://github.com/mediaocean/select2-amd": [
+		"select2-amd",
+		"select-amd"
+	],
 	"https://github.com/Wildhoney/Shift.js": [
 		"shift-js",
 		"Shift.js"
 	],
 	"https://github.com/adchsm/Slidebars": [
 		"sidebars",
-		"slidebars"
+		"slidebars",
+		"Slidebars"
 	],
 	"https://github.com/dennis-best/simple-spin": [
 		"simple-spin",
@@ -1043,9 +1231,22 @@
 		"simpleWebRTC",
 		"SimpleWebRTC"
 	],
+	"https://github.com/chrisdingli/Simpsum": [
+		"simpsum",
+		"Simpsum"
+	],
+	"https://github.com/soundasleep/bootstrap-datetimepicker-sass": [
+		"soundasleep-bootstrap-datetimepicker",
+		"soundasleep-bootstrap-datetimepicker-sass"
+	],
 	"https://github.com/twitter/typeahead.js": [
 		"soup",
 		"typeahead.js"
+	],
+	"https://github.com/johnpolacek/stacktable.js": [
+		"stackable",
+		"stackable.js",
+		"stacktable"
 	],
 	"https://github.com/nbubna/store": [
 		"store",
@@ -1063,9 +1264,17 @@
 		"strophe",
 		"strophejs"
 	],
+	"https://github.com/internetsistemas/stylish": [
+		"stylish-css",
+		"stylish-scss"
+	],
 	"https://github.com/synapsepd/synapse_bootstrap": [
 		"synapse_boostrap",
 		"synapse_bootstrap"
+	],
+	"https://github.com/forbesmyester/SyncIt": [
+		"syncit",
+		"sync-it"
 	],
 	"https://github.com/tagged/autogrow": [
 		"tagged-autogrow",
@@ -1099,6 +1308,10 @@
 		"transition-end",
 		"transitionEnd"
 	],
+	"https://github.com/treeframework/generic.normalize": [
+		"tree-normalize",
+		"tree-normalize.css"
+	],
 	"https://github.com/demircancelebi/underscore-deep": [
 		"underscoredeep",
 		"underscore-deep"
@@ -1106,6 +1319,18 @@
 	"https://github.com/GianlucaGuarini/Vague.js": [
 		"vague.js",
 		"Vague.js"
+	],
+	"https://github.com/rockerest/validly": [
+		"validly",
+		"validlyjs"
+	],
+	"https://github.com/rockerest/validly-form": [
+		"validly-form",
+		"validlyjs-form"
+	],
+	"https://github.com/rockerest/validly-password": [
+		"validlyjs-password",
+		"validly-password"
 	],
 	"https://github.com/2fdevs/bower-videogular": [
 		"videogular",
@@ -1118,6 +1343,10 @@
 	"https://github.com/iamnoah/writeCapture": [
 		"writeCapture",
 		"writeСapture"
+	],
+	"https://github.com/rummik/zenosphere.js": [
+		"zenosphere",
+		"zenosphere.js"
 	],
 	"https://github.com/benplum/Zoetrope": [
 		"Zeotrope",

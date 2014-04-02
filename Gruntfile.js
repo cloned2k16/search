@@ -81,11 +81,19 @@ module.exports = function (grunt) {
 
 		var processList = function (items) {
 			var ignored = require('./js/config/ignore');
+			var whitelist = require('./js/config/whitelist');
 			var namesByUrl = {};
 			items.forEach(function (item) {
 				var name = item.name;
 				if (ignored.indexOf(name) !== -1) {
 					return;
+				}
+
+				if (typeof item.website === 'string' && typeof whitelist[item.website] !== 'undefined') {
+					var whitelistedName = whitelist[item.website];
+					if (item.name !== whitelistedName) {
+						return;
+					}
 				}
 
 				var url = item.website;

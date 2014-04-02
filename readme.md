@@ -24,6 +24,12 @@ Quickest way to hide any unwanted package name from appearing in search results,
 
 There are also cases when one popular package URL can end up being registered multiple times with various names. In that case, you can whitelist that package's URL by specifying a preferred name in `js/config/whitelist.js` file.
 
+There is a Grunt task available that produces a nice list of duplicates in `duplicates.json` file that require some manual love.
+
+You can generate an updated list by running:
+
+    $ grunt duplicates
+
 ## Credit
 
 [![Fahad Ibnay Heylaal](http://gravatar.com/avatar/19a3655e6ba9e5a496ee690ba03f2180?s=144)](http://fahad19.com) | [![Sindre Sorhus](http://gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9?s=144)](http://sindresorhus.com)

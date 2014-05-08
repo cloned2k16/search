@@ -53,13 +53,15 @@ module.exports = function (App) {
 			};
 
 			var matchesByKeyword = function (item) {
-				if (_.isArray(item.keywords) && item.keywords.length > 0) {
-					return item.keywords.some(function (keyword) {
-						return keyword.toLowerCase().indexOf($scope.qParams.keyword.toLowerCase()) !== -1;
-					});
+				if (!_.isArray(item.keywords) || item.keywords.length === 0) {
+					return false;
 				}
 
-				return false;
+				return $scope.qParams.keyword.split(' ').every(function (qKeyword) {
+					return item.keywords.some(function (keyword) {
+						return keyword.toLowerCase().indexOf(qKeyword.toLowerCase()) !== -1;
+					});
+				});
 			};
 
 			var matchesByOwner = function (item) {

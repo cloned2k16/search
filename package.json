@@ -14,7 +14,6 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    "browserify": "^3.30.2",
     "grunt": "^0.4.2",
     "grunt-autoprefixer": "^0.7.1",
     "grunt-browserify": "^2.0.8",

@@ -19,22 +19,21 @@
 /**
  * Custom
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
+@family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@heading-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-@family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@heading-family: 'Montserrat', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-@scheme: #34495e;
+@scheme: #FFCC2F;
 @schemeLightened: lighten(@scheme, 5%);
 @schemeDarkened: darken(@scheme, 5%);
+@textColor: #543729;
+@lightGray: #CECECE;
 @table-bg-hover: transparent;
 @container-large-desktop: 900px;
 
 body {
 	font-family: @family;
 	background: #eee;
-	font-weight: 300;
+	color: @textColor;
 }
 
 h1,
@@ -43,7 +42,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: @heading-family;
 	font-weight: 400;
 }
 
@@ -52,7 +50,7 @@ h4 {
 }
 
 a {
-	color: #2980b9;
+	color: #008ec4;
 }
 
 .table > thead > tr > th {
@@ -71,24 +69,25 @@ header {
 	margin-bottom: 20px;
 
 	h1 {
-		text-align: center;
-		color: #fff;
-		text-shadow: 2px 2px 0 @schemeLightened, 9px 8px 0 rgba(0,0,0,0.15);
 		font-weight: 900;
-		font-size: 50px;
-		margin: 20px 0;
+		font-size: 64px;
+		margin: 40px 0 20px;
+		letter-spacing: -0.025em;
 	}
 
 	.logo {
-		text-align: center;
 		margin-bottom: 10px;
+		float: left;
+		margin-right: 20px;
 
 		img {
-			width: 150px;
+			width: 160px;
 		}
 	}
 
 	input[type=search] {
+		margin-top: 40px;
+
 		&::-webkit-search-cancel-button {
 			-webkit-appearance: searchfield-cancel-button;
 		}
@@ -143,7 +142,8 @@ section {
 		}
 
 		.label {
-			background: @scheme;
+			background: @lightGray;
+			color: @textColor;
 			display: inline-block;
 			font-weight: normal;
 		}

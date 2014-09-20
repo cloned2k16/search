@@ -125,6 +125,12 @@ module.exports = function (App) {
 				return list;
 			};
 
+			var dedupe = function (matchedResults) {
+				return _.uniq(matchedResults.reverse(), function(item){
+					return item.website;
+				});
+			};
+
 			var prioritize = function (matchedResults) {
 				if (!$scope.qParams.keyword) {
 					return matchedResults;
@@ -166,6 +172,7 @@ module.exports = function (App) {
 				$scope.page = 1;
 
 				matchedResults = find(items);
+				matchedResults = dedupe(matchedResults);
 				matchedResults = sort(matchedResults);
 				matchedResults = prioritize(matchedResults);
 				$scope.results = limit(matchedResults);

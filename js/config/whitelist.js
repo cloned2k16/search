@@ -8,5 +8,7 @@ module.exports = {
 	'https://github.com/twbs/bootstrap': 'bootstrap',
 	'https://github.com/FortAwesome/Font-Awesome': 'fontawesome',
 	'https://github.com/jquery/jquery': 'jquery',
-	'https://github.com/jabranr/Socialmedia': 'socialmedia'
+	'https://github.com/jabranr/Socialmedia': 'socialmedia',
+	'https://github.com/jashkenas/underscore': 'underscore',
+	'https://github.com/moment/moment': 'moment',
 };

@@ -1,8 +1,17 @@
 /**
  * Ignore these package names
  */
+
 module.exports = [
 	'Chart.js',
+	'coffeescript',
+	'linux',
+	'express',
+	'phantom',
+	'homebrew',
+	'jade',
+	'jasmine',
+	'web-starter-kit',
 	'EaselJS',
 	'EpicEditor',
 	'FitVids',

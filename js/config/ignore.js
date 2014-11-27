@@ -11,6 +11,7 @@ module.exports = [
 	'homebrew',
 	'jade',
 	'jasmine',
+	'angulerjs',
 	'web-starter-kit',
 	'EaselJS',
 	'EpicEditor',

@@ -126,9 +126,24 @@ module.exports = function (App) {
 			};
 
 			var dedupe = function (matchedResults) {
-				return _.uniq(matchedResults.reverse(), function(item){
+				var groupedResults = _.groupBy(matchedResults.reverse(), function (item) {
 					return item.website;
 				});
+				var list = [];
+				_.forEach(groupedResults, function (group) {
+					var matchedItem;
+					if (group.length > 1) {
+						matchedItem = _.find(group, function (item) {
+							var repoName = item.website.split('/').pop();
+							return item.name === repoName;
+						});
+					}
+					if (!matchedItem) {
+						matchedItem = group[0];
+					}
+					list.push(matchedItem);
+				});
+				return list;
 			};
 
 			var prioritize = function (matchedResults) {

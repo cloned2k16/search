@@ -133,8 +133,8 @@ module.exports = function (App) {
 				_.forEach(groupedResults, function (group) {
 					var matchedItem;
 					if (group.length > 1) {
+						var repoName = group[0].website.split('/').pop();
 						matchedItem = _.find(group, function (item) {
-							var repoName = item.website.split('/').pop();
 							return item.name === repoName;
 						});
 					}

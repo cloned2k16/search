@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Bower</ShortName>
+  <LongName>Search on Bower.io</LongName>
+  <Description>Search packages on Bower.io</Description>
+  <Tags>bower js javascript repository packages distribution</Tags>
+  <Language>en-us</Language>
+  <Contact>opensource@twitter.com</Contact>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" method="get" template="http://bower.io/search/?q={searchTerms}"/>
+  <moz:SearchForm>http://bower.io/search/</moz:SearchForm>
+  <Developer>Bower</Developer>
+  <AdultContent>false</AdultContent>
+  <Image height="64" width="64" type="image/png">https://avatars3.githubusercontent.com/u/3709251?v=3&s=64</Image>
+  <Image height="16" width="16" type="image/vnd.microsoft.icon">http://bower.io/favicon.ico</Image>
+</OpenSearchDescription>

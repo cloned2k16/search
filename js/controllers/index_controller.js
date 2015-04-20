@@ -59,7 +59,8 @@ module.exports = function (App) {
 
 				return $scope.qParams.keyword.split(' ').every(function (qKeyword) {
 					return item.keywords.some(function (keyword) {
-						return keyword.toLowerCase().indexOf(qKeyword.toLowerCase()) !== -1;
+						return typeof keyword === 'string' &&
+							keyword.toLowerCase().indexOf(qKeyword.toLowerCase()) !== -1;
 					});
 				});
 			};

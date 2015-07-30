@@ -9,8 +9,9 @@ module.exports = function (App) {
 		'$scope',
 		'$http',
 		'$location',
+		'$anchorScroll',
 		'localStorageService',
-		function ($scope, $http, $location, localStorageService) {
+		function ($scope, $http, $location, $anchorScroll, localStorageService) {
 			$scope.leftKey  = LEFT_KEY;
 			$scope.rightKey = RIGHT_KEY;
 
@@ -204,18 +205,19 @@ module.exports = function (App) {
 				$scope.results = limit(matchedResults);
 			};
 
+			var makeStep = function (d) {
+				$scope.page += d;
+				$scope.results = limit(matchedResults);
+				$location.hash('q');
+				$anchorScroll();
+			}
+
 			$scope.goToPrev = function () {
-				if ($scope.hasPrev()) {
-					$scope.page--;
-					$scope.results = limit(matchedResults);
-				}
+				if ($scope.hasPrev()) makeStep(-1);
 			};
 
 			$scope.goToNext = function () {
-				if ($scope.hasNext()) {
-					$scope.page++;
-					$scope.results = limit(matchedResults);
-				}
+				if ($scope.hasNext()) makeStep(1);
 			};
 
 			// checkers

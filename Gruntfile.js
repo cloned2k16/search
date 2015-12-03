@@ -105,9 +105,11 @@ module.exports = function (grunt) {
 
 			var duplicates = {};
 			for (var url in namesByUrl) {
-				var names = namesByUrl[url];
-				if (names.length > 1) {
-					duplicates[url] = names;
+				if (namesByUrl.hasOwnProperty(url)) {
+					var names = namesByUrl[url];
+					if (names.length > 1) {
+						duplicates[url] = names;
+					}
 				}
 			}
 			grunt.file.write('duplicates.json', JSON.stringify(duplicates, null, '\t'));

@@ -134,11 +134,11 @@ module.exports = function (App) {
 				var list = [];
 				_.forEach(groupedResults, function (group) {
 					var matchedItem;
-					if (group.length > 1) {
-						var repoName = group[0].website.split('/').pop();
-						matchedItem = _.find(group, function (item) {
-							return item.name === repoName;
-						});
+					if (group.length > 1 && group[0].website) {
+							var repoName = group[0].website.split('/').pop();
+							matchedItem = _.find(group, function (item) {
+								return item.name === repoName;
+							});
 					}
 					if (!matchedItem) {
 						matchedItem = group[0];

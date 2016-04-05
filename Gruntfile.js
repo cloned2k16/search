@@ -67,6 +67,8 @@ module.exports = function (grunt) {
 			app: {
 				files: [
 					'css/app.less',
+					'css/custom-responsive.less',
+					'css/nav.less',
 					'js/**/*.js'
 				],
 				tasks: ['default']

@@ -1,0 +1,45 @@
+@media screen and (max-width: 990px) {
+	#masthead h1 {
+		font-size: 43px;
+	}
+}
+
+@media screen and (max-width: @screen-md-max) {
+
+	.logo img { 
+	    margin-left: 15px;
+	}
+
+	.q-row {
+		padding: 0 15px 0 15px;
+	}
+
+	#q {
+		margin: 15px 0 0 0;
+	}
+}
+// not used @screen-md-max because of navigation => Logo clipping
+@media screen and (max-width: 680px) {
+	.logo img {
+		position: relative;
+	    display: inline-block;
+	    width: 40px !important;
+	    margin-left: 15px;
+	}
+	.logo {
+		top: 3px;
+	}
+	#masthead h1 {
+		font-size: 28px; 
+		margin: 0;
+	}
+
+	#masthead .sponsored {
+		font-size: 15px;
+		margin: 0 0 0 15px;		
+	}
+
+	#masthead .container {
+		padding: 0 10px 0 10px;
+	}
+}

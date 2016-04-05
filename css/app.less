@@ -9,7 +9,7 @@
 @import 'bootstrap/less/type.less';
 @import 'bootstrap/less/grid.less';
 @import 'bootstrap/less/tables.less';
-@import 'bootstrap/less/forms.less';
+@import 'bootstrap/less/forms.less'; 
 @import 'bootstrap/less/pager.less';
 @import 'bootstrap/less/labels.less';
 @import 'bootstrap/less/alerts.less';
@@ -17,11 +17,17 @@
 @import 'bootstrap/less/responsive-utilities.less';
 
 /**
- * Custom
+ * Custom Navigation taken from bower.github.io
  */
+@import 'nav.less'; 
+@import 'custom-responsive.less';
+/**
+ * 
+ * Custom
+ */ 
 @family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @heading-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+ 
 @scheme: #FFCC2F;
 @schemeLightened: lighten(@scheme, 5%);
 @schemeDarkened: darken(@scheme, 5%);
@@ -39,7 +45,7 @@ body {
 h1,
 h2,
 h3,
-h4,
+h4, 
 h5,
 h6 {
 	font-weight: 400;
@@ -65,7 +71,7 @@ header {
 	background: @scheme;
 	border-top: 3px solid @schemeDarkened;
 	border-bottom: 3px solid @schemeDarkened;
-	padding: 20px 0;
+	padding: 8px 0;
 	margin-bottom: 20px;
 
 	h1 {

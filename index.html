@@ -19,19 +19,25 @@
 			}
 		</style>
 	</head>
-	<body ng-app="BowerSearch" ng-controller="IndexController">
-		<header>
-			<div class="container">
+	<body ng-app="BowerSearch" ng-controller="IndexController" class="search-page">
+		<header id="masthead">
+			<div class="container ">
+				<ul class="network-nav nav">
+				  <li class="nav-docs"><a href="/">Docs</a></li>
+				  <li class="nav-search"><a href="/search">Search packages</a></li>
+				  <li class="nav-blog"><a href="/blog">Blog</a></li>
+				  <li class="nav-stats"><a href="/stats">Stats</a></li>
+				</ul>
 				<div class="row">
 					<div class="logo">
 						<a href="http://bower.io/" target="_self">
 							<img src="http://bower.io/img/bower-logo.png" alt="bower logo">
 						</a>
 					</div>
-					<h1 class="hidden-xs">Search Bower packages</h1>
-					<h2 class="sponsored hidden-xs">Registry sponsored by <a href="https://www.heroku.com/">Heroku</a></h2>
+					<h1>Search Bower packages</h1>
+					<h2 class="sponsored">Registry sponsored by <a href="https://www.heroku.com/">Heroku</a></h2>
 				</div>
-				<div class="row">
+				<div class="row q-row">
 					<input id="q" type="search" results="5" autofocus="autofocus" ng-model="q" ng-change="search()" class="form-control" placeholder="e.g. 'package-name', OR 'keyword', OR 'keyword owner:jquery'">
 				</div>
 			</div>
